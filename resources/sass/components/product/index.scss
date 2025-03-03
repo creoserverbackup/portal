@@ -1,0 +1,21 @@
+@import "product-btn";
+@import "product-sumary";
+@import "product-sticker";
+@import "product";
+
+
+    @media (max-width: $xlg) {
+        .dashboard-product-info {
+            font-size: 1.1rem;
+        }
+        .dashboard-product-attribute {
+            font-size: 1.1rem!important;
+        }
+
+        .dashboard-product-card__heading, .dashboard-product-card__heading-link {
+            padding: 0!important;
+            text-align: justify;
+            font-weight: bold!important;
+        }
+    }
+

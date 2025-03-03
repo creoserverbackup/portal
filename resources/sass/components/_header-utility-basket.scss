@@ -1,0 +1,205 @@
+.header-utility {
+    $self: &;
+
+    @media (max-width: $xlg--mw) {
+        position: absolute;
+        right: 0;
+        top: .3rem;
+    }
+
+    &__main {
+        color: $white;
+        position: relative;
+
+
+
+        @media (max-width: $xlg) {
+            width: 160px;
+        }
+
+        &:hover {
+            @media (max-width: $xlg) {
+                width: 280px;
+            }
+
+
+            transition: width .3s;
+            #{$self}__dropdown {
+                display: block;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                //visibility: visible;
+                // opacity: 1;
+                border: 1px solid $secondary-color;
+                border-top: 0;
+
+                max-height: 50rem;
+                transition: max-height .3s;
+            }
+        }
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        display: flex;
+        margin-bottom: .5rem;
+        height: 4rem;
+        padding: 0 1rem;
+        background: $secondary-color;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $xlg) {
+            height: 2.5rem;
+        }
+
+        &:hover {
+            color: $white;
+        }
+
+        #{$self}__heading {
+            font-size: 1.3rem;
+            display: inline-block;
+            vertical-align: middle;
+
+            @media (max-width: $xlg) {
+                font-size: 1rem;
+            }
+        }
+
+        [class*="icon"] {
+            font-size: 2.4rem;
+            @media (max-width: $xlg) {
+                font-size: 1.8rem;
+            }
+            float: right;
+            transform: translateY(.2rem);
+        }
+    }
+
+
+    &__info {
+        font-size: 1.3rem;
+        padding: .5rem 0;
+        text-align: center;
+        white-space: nowrap;
+        background: $secondary-color;
+
+        @media (max-width: $xlg) {
+            font-size: 1rem;
+        }
+
+    }
+
+    &__dropdown {
+        position: absolute;
+        //opacity: 0;
+        //visibility: hidden;
+        padding: 0 .8rem;
+        color: $black;
+        background: rgba($white, .9);
+        z-index: $overlayZIndex;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s;
+
+        top: 100%;
+        right: 0;
+        width: 100%;
+
+        .btn {
+            max-width: 100%;
+            font-size: 1.3rem;
+            padding-left: .5em;
+            padding-right: .5em;
+            padding-top: .8rem;
+            padding-bottom: .8rem;
+            width: 100%;
+            margin-bottom: .8rem;
+        }
+    }
+
+    &__products {
+        height: 31rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-bottom: .8rem;
+    }
+
+    &__product {
+        position: relative;
+        padding: 1rem 0;
+        font-size: 1.3rem;
+        color: $black;
+        line-height: 1.2;
+
+        &-heading {
+            max-width: 90%;
+        }
+
+        &:not(:first-child) {
+            border-top: 1px solid #a7a6a7;
+        }
+
+        &-price {
+            padding-left: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $black;
+            transition: all .3s;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        &-rm {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.4rem;
+            color: $primary-color;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                [class*="icon"] {
+                    color: #f00;
+                }
+            }
+
+            [class*="icon"] {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__dropdown-summary {
+        dl {
+            border-top: 1px solid $secondary-color;
+            padding: .5rem 0;
+            font-size: 1.2rem;
+            color: #aeadae;
+            margin: 0;
+
+            div {
+                display: flex;
+            }
+        }
+
+        dt {
+            font-weight: normal;
+        }
+
+        dd {
+            color: #286aa3;
+            white-space: nowrap;
+        }
+    }
+}

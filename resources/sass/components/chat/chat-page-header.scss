@@ -1,0 +1,49 @@
+.chat-heading {
+  &__person {
+    max-width: 26rem;
+    margin: 0 auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.3rem;
+      line-height: 1.1;
+      table-layout: fixed;
+      vertical-align: top;
+
+      td {
+        color: $primary-color;
+        padding: .2rem .5rem;
+        border: none;
+        vertical-align: top;
+
+        span {
+          color: $secondary-color;
+        }
+      }
+
+      td:first-child {
+        color: #000;
+      }
+
+      tr:hover td {
+        background: none;
+      }
+    }
+  }
+
+  &__info {
+    td {
+      font-size: 16px;
+      border: none;
+      padding: 0 20px 0 0;
+    }
+  }
+
+  &__info-right {
+    &-close {
+      cursor: pointer;
+    }
+  }
+
+}

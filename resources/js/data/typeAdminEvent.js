@@ -1,0 +1,13 @@
+module.exports = {
+
+    CHAT_NEW: 10,
+    CHAT_MESSAGE_NEW: 11,
+    CHAT_MESSAGE_NEW_ADMIN: 12,
+    CHAT_MESSAGE_PRINT: 13,
+
+    TICKET_NEW: 20,
+    TICKET_UPDATE: 21,
+
+    RMA_NEW: 30,
+    RMA_UPDATE: 31,
+}

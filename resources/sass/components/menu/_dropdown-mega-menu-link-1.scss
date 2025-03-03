@@ -1,0 +1,23 @@
+.dropdown-mega-menu-link-1 {
+  display: block;
+  font-weight: bold;
+  color: $primary-color;
+  transition: .3s;
+  line-height: 20px;
+  text-decoration: none;
+  min-height: 5rem;
+  font-size: 15px;
+
+  @media (max-width: $wxgW) {
+    font-size: 0.8rem;
+  }
+
+
+    @media (max-width: $xlg) {
+        min-height: auto;
+    }
+
+  &:hover {
+    color: darken($primary-color,5%);
+  }
+}

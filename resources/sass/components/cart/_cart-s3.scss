@@ -1,0 +1,233 @@
+.cart-s3 {
+  $root: &;
+
+  &__type {
+    border: 1px solid $grayMain;
+    margin-right: 5px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__type-available {
+    border-color: $secondary-color;
+
+    #{$root}__type-option-title {
+      color: $secondary-color;
+    }
+
+    #{$root}__type-option-text {
+      border: 1px solid $secondary-color;
+    }
+
+    #{$root}__type-title {
+      //border: 1px solid $secondary-color;
+      background: $secondary-color;
+    }
+
+    #{$root}__type-border {
+      background: $secondary-color;
+    }
+
+    #{$root}__type-option-text {
+      background-color: white;
+      color: black;
+    }
+
+    #{$root}__type-country {
+      //color: black;
+      border: 1px solid $secondary-color;
+      background-color: white;
+    }
+
+    #{$root}__type-region {
+      //color: black;
+      border: 1px solid $secondary-color;
+      background-color: white;
+      -webkit-appearance: none;
+    }
+
+    #{$root}__type-border-line {
+      border-top: 1px solid $secondary-color;
+
+    }
+
+  }
+
+  &__type-active {
+    border-color: $success-color;
+
+    #{$root}__type-option-title {
+      color: $success-color;
+    }
+
+    #{$root}__type-option-text {
+      border: 1px solid $success-color;
+    }
+
+    #{$root}__type-title {
+      background: $success-color;
+    }
+
+    #{$root}__type-border {
+      background: $success-color;
+    }
+
+    #{$root}__type-border-line {
+      border-top: 1px solid $success-color;
+    }
+
+    #{$root}__type-option-text {
+      background-color: white;
+      color: black;
+    }
+
+    #{$root}__type-country {
+      color: black;
+      border: 1px solid $success-color;
+      background-color: white;
+    }
+
+    #{$root}__type-region {
+      color: black;
+      border: 1px solid $success-color;
+      background-color: white;
+      -webkit-appearance: none;
+
+    }
+  }
+
+  &__type-disabled {
+
+    #{$root}__type-option-title {
+      color: $grayMain;
+    }
+
+    #{$root}__type-option-text {
+      border: 1px solid $grayMain;
+      color: #878484;
+      background-color: #eee;
+    }
+
+    #{$root}__type-option-text::placeholder {
+      color: #878484;
+      display: block;
+      font-size: 1rem;
+    }
+
+    #{$root}__type-country {
+      input {
+        width: 100%;
+        height: 18px;
+        border: 1px solid $grayMain;
+        font-size: 11px;
+        line-height: 1.2;
+        padding-left: 6px;
+        color: black;
+      }
+    }
+
+    #{$root}__type-region {
+      input {
+        width: 100%;
+        height: 18px;
+        border: 1px solid $grayMain;
+        font-size: 11px;
+        line-height: 1.2;
+        padding-left: 6px;
+        color: black;
+      }
+    }
+  }
+
+  &__type-option-text {
+    width: 100%;
+    height: 18px;
+    color: #878484;
+    border: 1px solid $grayMain;
+    font-size: 11px;
+    line-height: 1.2;
+    padding-left: 6px;
+    background-color: #eee;
+  }
+
+  &__type-option-text::placeholder {
+    color: #878484;
+    display: block;
+    font-size: 1rem;
+  }
+
+  &__type-option-title {
+    color: $grayMain;
+    display: block;
+    font-size: 1rem;
+  }
+
+  &__type-border {
+    background: $grayMain;
+  }
+
+  &__type-border-line {
+    border-top: 1px solid $grayMain;
+  }
+
+  &__type-map {
+    width: 100%;
+    border: 1px solid $grayMain;
+    margin-bottom: 24px;
+  }
+
+  &__type-title {
+    line-height: 1;
+    background: $grayMain;
+    min-height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__type-country {
+    padding-left: 6px;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0;
+    font-family: "Roboto", Arial, "Helvetica", sans-serif;
+    transition: all .3s;
+    border: 1px solid $grayMain;
+    color: #878484;
+    background-color: #eee;
+  }
+
+  &__type-country::placeholder {
+    color: #878484;
+    display: block;
+    font-size: 1rem;
+  }
+
+  &__type-region {
+    padding-left: 6px;
+    //padding: 0.1rem 0.3rem;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0;
+    font-family: "Roboto", Arial, "Helvetica", sans-serif;
+    transition: all .3s;
+    border: 1px solid $grayMain;
+    color: #878484;
+    background-color: #eee;
+  }
+
+  &__type-region::placeholder {
+    color: #878484;
+    display: block;
+    font-size: 1rem;
+  }
+
+}

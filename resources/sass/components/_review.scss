@@ -1,0 +1,66 @@
+.review {
+    $self: &;
+
+    &__header {
+        padding: 0 0 .5rem;
+        font-size: 1.3rem;
+        color: #a7a6a7;
+    }
+
+    &__author {
+        min-width: 7rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__date {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__body {
+        padding: 4.5rem 3rem;
+        background: #f2f2f2;
+        font-size: 1.7rem;
+        color: #333;
+        border-left: .5rem solid $secondary-color;
+        position: relative;
+
+        @media (max-width: $xlg) {
+            font-size: 1.3rem;
+            padding: 30px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid none solid solid;
+            border-color: transparent transparent transparent $secondary-color;
+            border-width: 1rem 0 1rem 1rem;
+        }
+    }
+
+    .support {
+        text-align: right;
+        padding-left: 0;
+        padding-right: 4rem;
+        border-left: none;
+        border-right: .5rem solid $primary-color;
+
+        @media (max-width: $xlg) {
+            padding: 15px;
+        }
+
+        &::before {
+            left: auto;
+            right: 0;
+            border-style: solid solid solid none;
+            border-color: transparent $primary-color transparent transparent;
+            border-width: 1rem 1rem 1rem 0;
+        }
+    }
+}

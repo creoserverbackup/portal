@@ -1,0 +1,55 @@
+.department-area {
+  max-width: 40rem;
+  border: 1px solid #818181;
+  padding: .5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+
+  &__heading {
+    font-size: 2.6rem;
+    color: $black;
+    line-height: 1.1;
+    margin: 1rem 0;
+  }
+
+  &__sticker {
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    margin-bottom: 3rem;
+    color: $white;
+    background: #286aa3;
+
+    &--warning {
+      background: $secondary-color;
+    }
+
+    &--success {
+      background: #3c9b0d;
+    }
+
+    &--alert {
+      background: #ff0d0d;
+    }
+  }
+
+  &__desc {
+    color: #a7a6a6;
+    font-size: 1.4rem;
+    max-width: 22rem;
+    margin: 0 auto 1.5rem;
+  }
+
+  &__icon {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    color: $primary-color;
+    margin-top: auto;
+  }
+}

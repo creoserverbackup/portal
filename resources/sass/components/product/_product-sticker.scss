@@ -1,0 +1,102 @@
+.product-sticker-type__sticker {
+  position: absolute;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  overflow: hidden;
+  width: 85px;
+  height: 85px;
+  left: 2px;
+  top: 0px;
+  z-index: 5;
+}
+
+.product-sticker-type__sticker-rectangle {
+  width: 0;
+  height: 0;
+  border-top: 85px solid #000;
+  border-right: 85px solid transparent;
+}
+
+
+.product-sticker-type--primary .product-sticker-type__sticker-rectangle {
+  border-top-color: $primary-color;
+}
+
+.product-sticker-type--primary .product-sticker-type__stick-line {
+  background: $primary-color;
+}
+
+//.product-sticker-type--danger .product-sticker-type__sticker-rectangle {
+//    border-top-color: $red;
+//}
+
+.product-sticker-type--dark .product-sticker-type__sticker-rectangle {
+  border-top-color: $black !important;
+}
+
+.product-sticker-type--secondary .product-sticker-type__sticker-rectangle {
+  border-top-color: $secondary !important;
+}
+
+//.product-sticker-type--danger .product-sticker-type__stick-line {
+//    background: $red !important;
+//}
+
+.product-sticker-type--dark .product-sticker-type__stick-line {
+  background: $black;
+}
+
+.product-sticker-type__sticker-icon {
+  position: absolute;
+  width: 27px;
+  top: 10px;
+  left: 10px;
+}
+
+.product-sticker-type__stick-lines {
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  width: calc(100% - 4px);
+}
+
+.product-sticker-type__stick-line {
+  color: #fff;
+  font-size: 19px;
+  display: block;
+  width: 100%;
+  height: 25px;
+  //background: #000;
+  margin-bottom: 3px;
+  line-height: 1.1;
+  padding: 2px 20px 4px 100px;
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+
+  //&:nth-child(2)::before {
+  //    width: 53px !important;
+  //}
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    transform: skewX(-45deg);
+    background: white;
+  }
+
+
+  &-one::before {
+    width: 0px;
+  }
+
+  &-two::before {
+    width: 53px;
+  }
+}

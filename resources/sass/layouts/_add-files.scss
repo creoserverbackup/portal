@@ -1,0 +1,35 @@
+.add-files {
+    width: -webkit-fill-available;
+    position: relative;
+    height: 100%;
+
+    input[type="file"] {
+        display: none;
+    }
+
+    span.remove-file {
+        margin-right: 5px;
+        margin-left: auto;
+        color: red;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .btn-upload {
+        border: 1px solid $secondary-color;
+        background: $secondary-color;
+    }
+
+    .row_add_file {
+        display: inline-flex;
+        width: 100%;
+        padding-left: 2%;
+    }
+
+    .file_name {
+        overflow-x: auto;
+        width: 80%;
+        display: block;
+        font-size: 12px;
+    }
+}

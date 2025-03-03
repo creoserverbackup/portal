@@ -1,0 +1,408 @@
+.dashboard {
+    $self: &;
+    position: relative;
+
+    padding: 2rem 0;
+
+    @media (max-width: $xlg) {
+        padding: 1rem 0!important;
+
+        &__main {
+            width: calc(100% - 60px);
+            margin-left: 60px;
+        }
+    }
+
+
+    &__sidebar {
+        position: fixed;
+        transition: all .3s;
+        opacity: 0;
+        visibility: hidden;
+        left: -101%;
+        top: 0;
+        bottom: 0;
+        //width: 28rem;
+        width: 100%;
+        //z-index: $overlayAboveZIndex;
+        z-index: $baseZIndex;
+        padding: 1.5rem;
+        background: $white;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            left: 0;
+        }
+
+        @media (min-width: $xlg) {
+            opacity: 1;
+            visibility: visible;
+            padding: 0;
+            background: none;
+            flex-basis: 25rem;
+            max-width: 25rem;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #a7a6a7;
+            padding-right: 1rem;
+            overflow: visible;
+            height: calc(100vh - 4rem);
+            position: sticky;
+            top: 2rem;
+        }
+
+        @media (min-width: 1400px) {
+            /* sidebar desktop version */
+            flex: 0 0 auto;
+            width: 26rem;
+            max-width: 100%;
+        }
+
+        .close-widget {
+            right: 1.5rem;
+            top: 1.5rem;
+            z-index: 9;
+        }
+    }
+
+    &__sidebar-main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-right: 1rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    &__sidebar-copy {
+        text-align: center;
+        margin-top: auto;
+        font-size: 1rem;
+        color: #a7a6a6;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__lifeline {
+        position: fixed;
+        transition: all .3s;
+        opacity: 0;
+        visibility: hidden;
+        right: -101%;
+        top: 0;
+        bottom: 0;
+        //width: 28rem;
+        width: 100%;
+        //z-index: $overlayAboveZIndex;
+        z-index: $baseZIndex;
+        padding: 1.5rem;
+        background: $white;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            right: 0;
+        }
+
+        @media (min-width: $xlg) {
+            //position: static;
+            opacity: 1;
+            visibility: visible;
+            padding: 0;
+            background: none;
+
+            flex-basis: 25rem;
+            max-width: 25rem;
+            display: block;
+
+            height: calc(100vh - 4rem);
+            position: sticky;
+            top: 2rem;
+        }
+
+        @media (min-width: 1400px) {
+            /* lifeline desktop version */
+            flex: 0 0 auto;
+            width: 26rem;
+            max-width: 100%;
+        }
+
+        .close-widget {
+            left: 2rem;
+            top: 2rem;
+        }
+    }
+
+    &__nav {
+        margin: 0 0 1.5rem;
+        border-bottom: 1px solid #a7a6a6;
+        padding: 0 1rem 1.5rem;
+
+        @media (min-width: 1400px) {
+            padding: 0 1rem 1.5rem;
+        }
+    }
+
+    .dashboard-nav--thumbs {
+        border: none;
+        margin: 0 0 .8rem;
+        //padding: 0;
+
+        padding: 0 1rem;
+
+        @media (min-width: 1400px) {
+            padding: 0 1rem;
+        }
+    }
+
+    &__promo {
+        color: #a7a6a6;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        line-height: 1.2;
+
+        &-main {
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+
+            span {
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &__details {
+        margin-top: 7px;
+
+        label {
+            font-size: 12px;
+            display: flex;
+            text-align: left;
+            flex-direction: row;
+        }
+
+        span {
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 2px;
+            color: $secondary-color;
+        }
+    }
+
+    .close-widget {
+        background: none;
+        border: none;
+        padding: 0;
+        color: $secondary-color;
+        font-size: 1.8rem;
+        position: fixed;
+    }
+
+    @media (min-width: $xlg) {
+        display: flex;
+        &__main {
+            /* main desktop version */
+            flex: 0 0 auto;
+            padding: 0 4rem;
+            max-width: 100%;
+            width: 100%;
+
+
+            &--one-column {
+                width: calc(100% - 25rem);
+            }
+
+            &--two-column {
+                width: calc(100% - 25rem * 2);
+            }
+        }
+    }
+
+    @media(min-width: 1400px) {
+        &__main {
+
+            &--one-column {
+                width: calc(100% - 26rem);
+            }
+
+            &--two-column {
+                width: calc(100% - 26rem * 2);
+            }
+
+
+        }
+    }
+
+    &__menu-show-hide {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        cursor: pointer;
+        z-index: 999999;
+    }
+}
+
+.dashboard-menu-rolled {
+
+    @media (min-width: $xlg) {
+        display: flex;
+        .dashboard__main {
+            /* main desktop version */
+            flex: 0 0 auto;
+            padding: 0 4rem;
+            //max-width: 100%;
+            //width: 100%;
+
+            &--one-column {
+                width: calc(100% - 15rem) !important;
+            }
+
+            &--two-column {
+                width: calc(100% - 15rem * 2) !important;
+            }
+        }
+    }
+
+    @media(min-width: 1400px) {
+        .dashboard__main {
+
+            &--one-column {
+                width: calc(100% - 16rem) !important;
+            }
+
+            &--two-column {
+                width: calc(100% - 16rem * 2) !important;
+            }
+
+
+        }
+    }
+}
+
+// Lifeline disabled gap
+@media (min-width: $xlg) {
+    .is-lifeline-hidden .dashboard__main {
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 1400px) {
+    .is-lifeline-hidden .dashboard__main {
+        padding-right: .5rem;
+    }
+}
+
+// fixed
+@media (min-width: $xlg) {
+    .dashboard-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 12;
+        padding-top: 2rem;
+        margin-top: -2rem;
+        background: rgba(255, 255, 255, 0.95);
+        //background: rgba(255, 255, 255, 100);
+    }
+
+    .selected-background-dashboard {
+        height: 10rem;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        //background: rgba(255, 255, 255, 0.6);
+        z-index: 11;
+
+        &--sorting {
+            height: 15rem;
+        }
+
+        &__main {
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.2;
+            background-position: 50%;
+            background-size: cover;
+        }
+
+        @at-root body.is-extra-fixed-space {
+            .selected-background-dashboard {
+                height: 13.5rem;
+
+                &--sorting {
+                    height: 17.5rem;
+                }
+            }
+
+            .product-controls {
+                top: 13.8rem;
+            }
+        }
+    }
+
+    .scrolled .product-controls {
+        border-bottom: 1px solid #a7a6a7;
+    }
+
+    .product-controls {
+        //position: sticky;
+        //left: 0;
+        //z-index: 11;
+        //top: 0;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .is-lifeline-hidden {
+        .product-controls {
+            right: 2rem;
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1680px) {
+    .product-controls {
+        top: 13rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .product-controls {
+        left: 31.5rem;
+        right: 30rem;
+    }
+}
+
+.is-lifeline-hidden .products-list {
+    > .row > [class*="col-"] {
+        @media (min-width: $xlg) {
+            max-width: 25%;
+            flex-basis: 25%;
+        }
+
+        @media (min-width: 1600px) {
+            max-width: 20%;
+            flex-basis: 20%;
+        }
+    }
+}
+

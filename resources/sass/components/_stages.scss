@@ -1,0 +1,94 @@
+.stages {
+  $self: &;
+
+  text-align: center;
+  max-width: 44rem;
+  width: 100%;
+  margin: 0 auto 4rem;
+  white-space: nowrap;
+
+  @media (min-width: $md) {
+    margin-bottom: 1rem;
+  }
+
+  &__stage {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+
+    &:first-child {
+      margin-right: 1.5rem;
+    }
+
+    &:last-child {
+      margin-left: 1.5rem;
+    }
+
+    @media (min-width: $sm) {
+      &:first-child {
+        margin-right: 7rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 8.5rem;
+          height: .5rem;
+          top: 2.6rem;
+          left: 100%;
+          background: #eee;
+          border-radius: 3px 0 0 3px;
+          margin-left: -1rem;
+        }
+      }
+
+      &:last-child {
+        margin-left: 7rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 8.5rem;
+          height: .5rem;
+          top: 2.6rem;
+          right: 100%;
+          background: #eee;
+          border-radius: 0 3px 3px 0;
+          margin-right: -1rem;
+        }
+      }
+    }
+
+    &.active {
+      color: #04d354;
+
+      &::before {
+        background: #04d354;
+      }
+
+      #{$self}__stage-step {
+        border-color: #04d354;
+        color: #04d354;
+      }
+    }
+  }
+
+  &__stage-step {
+    width: 6rem;
+    height: 6rem;
+    border: .4rem solid #eee;
+    border-radius: 50%;
+    color: #555555;
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: 5.5rem;
+    margin: 0 auto .5rem;
+  }
+
+  &__stage-desc {
+    font-size: 1.4rem;
+    width: 12rem;
+    display: block;
+    white-space: normal;
+    line-height: 1.2;
+  }
+}

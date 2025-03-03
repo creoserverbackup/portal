@@ -1,0 +1,38 @@
+.order-center-accept {
+
+
+  &__step {
+    cursor: pointer;
+    color: white;
+    width: 6%;
+    margin: 1px;
+    border: 1px solid $primary-color;
+    text-align: center;
+  }
+
+  &__step:hover {
+    background-color: $secondary-color;
+    color: white;
+  }
+
+  @media (max-width: $sm) {
+    &__header-btn {
+      font-size: 0.8rem;
+    }
+
+    &__step {
+      width: initial;
+    }
+
+    &__data {
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+
+      .col-6 {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

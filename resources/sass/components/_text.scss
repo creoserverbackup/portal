@@ -1,0 +1,35 @@
+.text-white {
+    --bs-text-opacity: 1;
+    color: $white !important;
+}
+
+.text-gray {
+    --bs-text-opacity: 1;
+    color: rgba(135,132,132,var(--bs-text-opacity))!important;
+    color: rgba(var($grayWeb),var(--bs-text-opacity))!important;
+}
+
+.text-start {
+    text-align: left!important;
+}
+
+.text-success {
+    --bs-text-opacity: 1;
+    color: rgba(0, 128, 0, var(--bs-text-opacity)) !important;
+    color: rgba(var($success-color), var(--bs-text-opacity)) !important;
+}
+
+.text-red {
+    color: $red;
+}
+
+.text-secondary {
+    --bs-text-opacity: 1;
+    color: #286ebf;
+    color: rgba(40,106,163,var(--bs-text-opacity))!important;
+    color: rgba(var($blue),var(--bs-text-opacity))!important;
+}
+
+.fw-bold {
+    font-weight: 700!important;
+}

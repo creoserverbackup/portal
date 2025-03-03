@@ -1,0 +1,24 @@
+.logo {
+    text-align: center;
+
+    @media (min-width: $md) {
+        position: absolute;
+        left: -1.5rem;
+        top: -1.5rem;
+    }
+
+    &__img-wrap {
+        max-width: 22rem;
+        display: inline-block;
+    }
+}
+
+.inner-logo {
+    text-align: center;
+
+    &__img-wrap {
+        max-width: 20rem;
+        display: block;
+        margin: auto;
+    }
+}

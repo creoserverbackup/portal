@@ -1,0 +1,130 @@
+.contact-center {
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+    }
+
+    &__upcoming {
+        line-height: 1.2;
+        display: flex;
+        margin: 0 0 2rem;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+
+        @media (min-width: $sm) {
+            width: auto;
+            text-align: left;
+            justify-content: flex-start;
+        }
+    }
+
+    &__upcoming-caption {
+        color: #333;
+    }
+
+    &__upcoming-time {
+        color: #3c9b0d;
+    }
+
+    &__helpers {
+        margin-bottom: 2rem;
+
+        @media (min-width: $md) {
+            margin-bottom: 4rem;
+        }
+
+        //> .row > [class*="col-"] {
+        //    margin-bottom: 1.5rem;
+        //}
+    }
+
+    &__details {
+        //> .row > [class*="col-"] {
+        //    margin-bottom: 1.5rem;
+        //}
+
+        text-align: center;
+
+        @media (min-width: $sm) {
+            text-align: left;
+        }
+    }
+
+    &__detail {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        ul {
+            margin: 0;
+        }
+
+
+        &-heading {
+            color: $primary-color;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        &-nav {
+            max-width: 26rem;
+            width: 100%;
+            margin: 0 auto;
+
+            @media (min-width: $sm) {
+                margin: 0;
+            }
+        }
+
+        &-item {
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
+        }
+
+        &-link.btn {
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &-address {
+            font-style: normal;
+            font-size: 1.4rem;
+            //color: $black;
+
+            > *:not(:first-child) {
+                margin-top: 2rem;
+            }
+
+            span {
+                display: block;
+            }
+
+            a {
+                color: $black;
+                text-decoration: none;
+
+                &:hover {
+                    color: $secondary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-review {
+            max-width: 26rem;
+            margin: 0 auto;
+            width: 100%;
+
+            @media (min-width: $sm) {
+                margin: 0;
+            }
+        }
+    }
+}

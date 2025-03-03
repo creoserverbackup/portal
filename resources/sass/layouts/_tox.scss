@@ -1,0 +1,30 @@
+/* ---------- Tiny MCE ---------- */
+.tox-tinymce {
+  margin-bottom: 2.5rem;
+}
+
+.tox-notifications-container {
+  display: none !important;
+}
+
+.tox-toolbar__primary {
+  background: $secondary-color !important;
+  color: $white !important;
+
+  svg {
+    fill: $white !important;
+  }
+}
+
+.tox-tbtn {
+  color: $white !important;
+
+  &:hover {
+    background-color: mix(black, $secondary-color, 10%) !important;
+  }
+}
+
+.tox .tox-tbtn--enabled,
+.tox .tox-tbtn--enabled:hover {
+  background-color: mix(black, $secondary-color, 10%) !important;
+}

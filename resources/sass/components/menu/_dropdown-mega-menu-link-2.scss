@@ -1,0 +1,17 @@
+.dropdown-mega-menu-link-2 {
+  display: block;
+  transition: .3s;
+  color: $black;
+  line-height: 20px;
+  text-decoration: none;
+  font-size: 15px;
+
+  @media (max-width: $wxgW) {
+    font-size: 0.8rem;
+  }
+
+  &:hover {
+    color: $gray-700;
+    text-decoration: underline;
+  }
+}

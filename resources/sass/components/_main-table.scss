@@ -1,0 +1,150 @@
+.main-table {
+    overflow-x: auto;
+
+    &__table {
+        color: #333;
+        position: relative;
+    }
+
+    a {
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__th {
+        background: $primary-color;
+        color: white;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+
+        &--id {
+            width: 95px;
+        }
+
+        &--topic {
+            min-width: 140px;
+        }
+
+        &--number {
+           width: 140px;
+
+        }
+
+        &--status {
+            width: 100px;
+
+        }
+
+        &--department {
+            width: 95px;
+
+        }
+
+        &--date {
+            width: 130px;
+
+        }
+    }
+
+
+
+    tbody td {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border-color: #a7a6a6;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    tr {
+        cursor: pointer;
+
+        &.active-ticket {
+            td {
+                color: $primary-color;
+                font-weight: bold;
+
+                @at-root .night-mode & {
+                    color: $secondary-color;
+                }
+            }
+
+        }
+    }
+
+    tr:hover {
+        td {
+            color: $secondary-color;
+            //font-weight: bold;
+            background: transparent;
+        }
+
+        a {
+            color: $secondary-color;
+        }
+    }
+
+    //@media (max-width: $md--mw) {
+    //    &,
+    //    tbody,
+    //    td,
+    //    th,
+    //    thead,
+    //    tr {
+    //        display: block
+    //    }
+    //
+    //    tr {
+    //        border-top: 1px solid #a7a6a6;
+    //        margin-bottom: 3rem;
+    //    }
+    //
+    //    &__th {
+    //        position: absolute;
+    //        top: -9999px;
+    //        left: -9999px
+    //    }
+    //
+    //    td {
+    //        position: relative;
+    //        padding-left: 50%;
+    //        border: 0;
+    //        border-bottom: 1px solid #eee;
+    //    }
+    //
+    //    td:before {
+    //        position: absolute;
+    //        top: 50%;
+    //        left: 0;
+    //        width: 45%;
+    //        white-space: nowrap;
+    //        text-transform: uppercase;
+    //        color: #a7a6a6;
+    //        font-weight: bold;
+    //        font-size: 1.4rem;
+    //        line-height: 1.3;
+    //        transform: translateY(-50%);
+    //    }
+    //
+    //    td::before {
+    //        content: attr(data-heading);
+    //    }
+    //}
+
+    tr:hover td {
+        background-color: transparent;
+        color: #333;
+
+        &::before {
+            background-color: transparent;
+        }
+    }
+}

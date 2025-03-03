@@ -1,0 +1,303 @@
+.filter-toggle {
+  color: $white;
+  border: 1px solid $primary-color;
+  padding: .5rem .5rem;
+  transition: all .3s;
+  background: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  width: 4rem;
+  height: 4rem;
+  background: $primary-color;
+  position: relative;
+
+  &:hover {
+    background: $secondary-color;
+    border-color: $secondary-color;
+  }
+
+  &.active {
+    background: $secondary-color;
+    border-color: $secondary-color;
+
+    &:hover {
+      background: mix($black, $secondary-color, 15%);
+    }
+  }
+
+  &.open {
+    border-color: #a7a6a6;
+    background: $white;
+    color: #a7a6a6;
+  }
+}
+
+.filter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: $white;
+  top: 9.5rem;
+  z-index: 113;
+  //display: none;
+  font-size: 1.2rem;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: none;
+
+  @media (min-width: $md) {
+    justify-content: space-between;
+    top: 4.5rem;
+  }
+
+  @media (min-width: $xlg) {
+    top: 4.5rem;
+    //top: 100%;
+    //transform: translateY(-3.5rem);
+
+    &::before {
+      content: "";
+      width: 4rem;
+      height: .7rem;
+      background: $white;
+      border-left: 1px solid #a7a6a6;
+      border-right: 1px solid #a7a6a6;
+      position: absolute;
+      bottom: 100%;
+      margin-top: -.1rem;
+      margin-left: -.1rem;
+      left: 0;
+    }
+  }
+
+  &.open {
+    //display: block;
+
+    max-height: 100vh;
+    padding: 1rem 1rem 1rem 3rem;
+    transition: max-height .5s;
+    border: 1px solid #a7a6a6;
+    overflow: visible;
+
+    @media (min-width: $md) {
+      display: flex;
+    }
+  }
+
+  &__col {
+    padding: 1rem 0 0;
+
+    @media (min-width: $md) {
+      flex: 1;
+      padding: 0 1rem;
+
+      &:first-child {
+        border-right: 2px solid #eee;
+        width: 14rem;
+        flex: none;
+
+        .filter__field {
+          //float: left;
+          //width: 50%;
+          min-height: 2rem;
+          margin: 0;
+        }
+      }
+
+      &:last-child {
+        border-left: 2px solid #eee;
+        width: 20rem;
+        flex: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: $md--mw) {
+      &:not(:first-child) {
+        border-top: 2px solid #eee;
+      }
+    }
+  }
+
+  &__sections {
+      @media (min-width: $md) {
+      margin: 0 -1rem;
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  &__section {
+      overflow: auto;
+    @media (min-width: $md) {
+      padding: 0 1rem;
+      flex: 1;
+
+      &:not(:first-child) {
+        border-left: 2px solid #eee;
+      }
+    }
+
+    @media (max-width: $md--mw) {
+      &:not(:first-child) {
+        border-top: 2px solid #eee;
+      }
+
+      padding: 1rem 0;
+    }
+
+    &--rows {
+      .filter__field {
+        width: 50%;
+        float: left;
+        height: 1.6rem;
+
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__field {
+    @media (min-width: $md) {
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: $md--mw) {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    margin: 0 -.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  &__price {
+    margin: 0 .5rem;
+    border-color: #a7a6a6;
+    flex-basis: 50%;
+    max-width: 50%;
+    font-size: 1.1rem;
+  }
+
+  &__btns {
+    display: flex;
+    margin: 0 -.5rem;
+    margin-top: auto;
+  }
+
+  &__btn {
+    font-size: 1.1rem;
+    margin: 0 .5rem;
+    padding: .2rem .1rem;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .radio-label {
+    &__main {
+      font-size: 1.1rem;
+      color: #999;
+
+      &::before {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    &__input:checked + .radio-label__main {
+      color: $secondary-color;
+
+      &::before {
+        border-color: $secondary-color;
+      }
+
+      &::after {
+        left: .4rem;
+        top: .4rem;
+        width: .4rem;
+        height: .4rem;
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  .checkbox-label {
+    &__main {
+      font-size: 1.1rem;
+      color: #999;
+
+      &::before {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    &__input:checked + .checkbox-label__main {
+      color: $secondary-color;
+
+      &::before {
+        border-color: $secondary-color;
+      }
+
+      &::after {
+        //content: "\e929";
+        color: $secondary-color;
+        font-size: .8rem;
+
+        left: .2rem;
+
+        //font-family: "icons" !important;
+        //speak: none;
+        //font-style: normal;
+        //font-weight: normal;
+        //font-variant: normal;
+        //text-transform: none;
+        //line-height: 1;
+        //-webkit-font-smoothing: antialiased;
+        //-moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+}
+
+@media (min-width: $xlg) and (max-width: 1599px) {
+  .filter {
+    flex-wrap: wrap;
+    padding-left: 1rem;
+
+    &__col,
+    &__col:first-child,
+    &__col:last-child {
+      flex: 0 0 100%;
+      max-width: 100%;
+      border: none;
+    }
+
+    &__col:not(:first-child) {
+      border-top: 1px solid #eee;
+      padding-top: 1rem;
+    }
+
+    .filter__col:first-child .filter__field {
+      width: 33.333%;
+    }
+  }
+
+  /*.breadcrumbs::after {
+    display: none !important;
+  }*/
+}

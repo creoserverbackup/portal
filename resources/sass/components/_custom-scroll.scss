@@ -1,0 +1,94 @@
+.simplebar-track.simplebar-vertical {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+
+.simplebar-scrollbar {
+  &::before {
+    background: $primary-color;
+  }
+}
+
+.night-mode .simplebar-scrollbar {
+  &::before {
+    background: $secondary-color;
+  }
+}
+
+.vb > .vb-dragger {
+  z-index: 555;
+  width: 12px;
+  right: 0;
+}
+
+.vb > .vb-dragger > .vb-dragger-styler {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotate3d(0,0,0,0);
+  transform: rotate3d(0,0,0,0);
+  -webkit-transition:
+      background-color 100ms ease-out,
+      margin 100ms ease-out,
+      height 100ms ease-out;
+  transition:
+      background-color 100ms ease-out,
+      margin 100ms ease-out,
+      height 100ms ease-out;
+  background-color: $primary-color;
+  margin: 5px 5px 5px 0;
+  border-radius: 20px;
+  height: calc(100% - 10px);
+  display: block;
+}
+
+.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
+  background-color: rgba($primary-color,.3);
+}
+
+.vb > .vb-dragger:hover > .vb-dragger-styler {
+  background-color: rgba($primary-color,.5);
+  margin: 0px;
+  height: 100%;
+}
+
+.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
+  background-color: rgba($primary-color,.5);
+  margin: 0px;
+  height: 100%;
+}
+
+.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
+  background-color: rgba($primary-color,.5);
+}
+
+.night-mode {
+  .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba($secondary-color,.3);
+  }
+
+  .vb > .vb-dragger:hover > .vb-dragger-styler {
+    background-color: rgba($secondary-color,.5);
+  }
+
+  .vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba($secondary-color,.5);
+  }
+
+  .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba($secondary-color,.5);
+  }
+}
+
+.el1full {
+  display: block;
+  width: auto;
+  height: 100vh;
+  /*background-image: url('../images/bckg.png');*/
+  //background: rgba(255, 255, 255, 100);
+  //background-size: cover;
+}
+
+body.vuebar {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}

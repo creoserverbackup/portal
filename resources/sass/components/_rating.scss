@@ -1,0 +1,48 @@
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+
+  &__label {
+    display: inline-block;
+    font-size: 0;
+    cursor: pointer;
+
+    &::before {
+      position: relative;
+      font: 1.2rem/1 icons;
+      display: block;
+      content: "\e928";
+      color: #424242;
+      font-weight: 400;
+    }
+
+    &:hover::before,
+    &:hover ~ label::before,
+    &.selected::before,
+    &.selected ~ label::before {
+      color: #ee731b;
+      font-weight: 900;
+    }
+  }
+  
+  &__radio {
+    position: absolute;
+    left: -999999px;
+  }
+
+  &__current-state {
+    display: block;
+    color: #ee731b;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+
+.filter__field--rating {
+  display: flex;
+  align-items: center;
+
+  .rating {
+    margin-left: 1rem;
+  }
+}

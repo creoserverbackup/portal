@@ -1,0 +1,86 @@
+.dashboard-roof {
+    margin-bottom: 1.5rem;
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+
+    @media (min-width: $xlg) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__main {
+        position: relative;
+
+        @media (min-width: $xlg) {
+            flex: 1;
+        }
+    }
+
+    &__basket {
+        width: 16rem;
+        margin-left: 1.5rem;
+
+        @media (min-width: $xlg) {
+            flex: none;
+            margin-left: 4rem;
+        }
+    }
+
+    &__search-form {
+        margin-bottom: .5rem;
+
+        @media (min-width: $md) {
+            margin-left: 4.4rem;
+        }
+    }
+
+    .filter-toggle {
+        float: right;
+
+        @media (min-width: $md) {
+            float: left;
+        }
+        @media (max-width: $xlg) {
+            float: none;
+        }
+    }
+
+    &__mob-header {
+        padding-right: 17rem;
+        margin-bottom: 3rem;
+
+        @media (max-width: $xlg) {
+            padding-right: 14rem;
+        }
+
+        .inner-logo__img-wrap {
+            margin: 0;
+        }
+    }
+
+    .dashboard__mob-toggles {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        flex-basis: 100%;
+        max-width: 100%;
+
+        &-toggle {
+            border: 1px solid #a7a6a6;
+            background: $white;
+            color: #a7a6a6;
+            transition: all .3s;
+            font-size: 1.6rem;
+            padding: .5rem 1rem;
+
+            &:hover {
+                color: $secondary-color;
+            }
+
+            i {
+                position: relative;
+                top: .1rem;
+                margin-right: .5rem;
+            }
+        }
+    }
+}

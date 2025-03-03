@@ -1,0 +1,19 @@
+.communication-start {
+  text-align: center;
+  padding: 3rem 0 0;
+
+  p {
+    color: #a7a6a6;
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+
+    strong {
+      color: $secondary-color;
+      font-weight: 700;
+    }
+  }
+
+  .btn {
+    margin: 0 1rem;
+  }
+}

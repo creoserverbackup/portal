@@ -1,0 +1,9 @@
+.mce-content-body[data-mce-placeholder]::before {
+    font-size: 1rem; !important;
+    font-style: italic !important;
+    color: #555;
+}
+
+.mce-content-body[data-mce-placeholder]:focus::before {
+     color: transparent;
+ }

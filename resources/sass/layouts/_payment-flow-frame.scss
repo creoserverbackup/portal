@@ -1,0 +1,61 @@
+.payment-frame {
+    margin-right: 15px;
+
+    &__user-info-block {
+        display: flex;
+        margin-top: 15px;
+    }
+
+    &__name-field {
+        color: $primary-color;
+    }
+
+    &__value-field {
+        margin-left: 15px;
+        color: $dark--light;
+    }
+
+    &__double-field {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    &__user-contact {
+        margin-top: 60px;
+    }
+
+    &__user-count {
+        position: absolute;
+        right: 0px;
+    }
+
+    &__btn {
+        display: -webkit-box;
+        flex: 0 0 93%;
+        max-width: 93%;
+    }
+
+    &__btn-number {
+        padding: 5px;
+        border: 2px solid $secondary-color;
+        color: $secondary-color;
+        text-align: center;
+        min-width: 30%;
+        margin-left: auto;
+    }
+
+    &__btn-accept {
+        padding: 5px;
+        border: 2px solid $secondary-color;
+        color: $secondary-color;
+        text-align: center;
+        min-width: 30%;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    &__btn-accept:hover {
+        background: $secondary-color;
+        color: $white;
+    }
+}

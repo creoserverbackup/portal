@@ -1,0 +1,43 @@
+.create-ticket {
+    position: relative;
+    padding-top: 100%;
+    margin-bottom: 2.5rem;
+
+    &__container {
+        position: absolute;
+        border: 1px solid $primary-color;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    &__btn {
+        margin-bottom: 2.5rem;
+    }
+
+    &__description {
+        font-size: 1.3rem;
+        color: #333;
+        max-width: 22rem;
+        text-align: center;
+        line-height: 1.3;
+        margin-bottom: 0;
+    }
+
+    &__select {
+        color: #2ea328;
+    }
+
+    @media (min-width: $md) {
+        margin-bottom: 0;
+    }
+
+
+}

@@ -1,0 +1,132 @@
+.pf-method-pay {
+    padding: 7px;
+    border: 1px solid $dark;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    &.disabled {
+        opacity: .4;
+        cursor: default;
+
+        &:hover {
+            border-color: $primary-color;
+        }
+    }
+
+    &.checked {
+        -webkit-box-shadow: inset 0px 0px 4px 2px rgba(0, 128, 0, 100.0);
+        border-color: $success-color;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__body {
+        display: flex;
+        align-items: end;
+    }
+
+    &__title {
+        margin-bottom: auto;
+        font-size: 1.4rem;
+        margin-left: 15px;
+        font-weight: 300;
+        color: $grayBlack;
+        @media (max-width: $md) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__price-title {
+        font-size: 11px;
+        font-weight: 300;
+        color: $grayBlack;
+    }
+
+    &__price-price {
+        font-size: 11px;
+        font-weight: 500;
+        color: $black;
+    }
+
+    &__logo {
+        width: 45px;
+        flex: 0 0 auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &__radio-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        label {
+            margin-bottom: 0;
+        }
+    }
+
+    &__radio {
+        width: auto;
+        margin-right: 15px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &__added {
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 1px solid $primary-color;
+    }
+
+    &__qr {
+        padding: 5px;
+        border: 1px solid $dark;
+        font-size: 1.4rem;
+        color: black;
+        font-weight: 300;
+        margin-bottom: 10px;
+        height: 235px;
+
+        &-title {
+            margin-bottom: 5px;
+        }
+
+        &-text {
+            font-size: 1rem;
+        }
+
+        &-body {
+            padding-top: 20px;
+            padding-bottom: 12px;
+        }
+
+        &-code {
+            margin-right: 30px;
+            width: 40%;
+        }
+
+        &-img {
+            &--qr-code {
+                width: 140px;
+            }
+        }
+    }
+
+    &__info {
+        padding: 15px;
+        border: 1px solid $secondary-color;
+        font-size: 1.4rem;
+        color: black;
+        font-weight: 300;
+        margin-top: 10px;
+
+        .blue {
+            color: $secondary-color;
+            text-transform: uppercase;
+        }
+    }
+}

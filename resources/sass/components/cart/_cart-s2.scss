@@ -1,0 +1,16 @@
+.cart-s2 {
+  $root: &;
+
+  &__btn {
+    padding: 0 5px;
+    background-color: $primary-color;
+    color: white;
+    border: 1px solid $primary-color;
+    width: 100%;
+
+    &:disabled {
+      background: $disabledButton;
+      border-color: $disabledButton;
+    }
+  }
+}

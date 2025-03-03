@@ -1,0 +1,63 @@
+.search-form {
+
+
+    &__field {
+        position: relative;
+
+    }
+
+    &__input {
+        padding: 1rem 4.5rem 1rem 1rem;
+        border: 1px solid $grayMain;
+        height: 4rem;
+
+        @media (max-width: $xlg) {
+            margin-top: 15px;
+        }
+
+        &:focus {
+            border-color: $secondary-color;
+
+            &::placeholder {
+                color: transparent;
+            }
+
+        }
+
+        ::placeholder {
+            font-style: italic;
+        }
+    }
+
+    &__submit {
+        border: none;
+        border-left: 1px solid $grayMain;
+        background: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 4rem;
+
+        @media (max-width: $xlg) {
+            top: 15px
+        }
+
+        &:hover {
+            background: $secondary-color;
+
+            i {
+                color: white;
+            }
+        }
+
+        i {
+            transition: all .3s;
+            color: $grayMain;
+            font-size: 1.8rem;
+
+            @include absolute-center;
+
+        }
+    }
+}

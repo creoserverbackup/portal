@@ -1,0 +1,194 @@
+.rma {
+
+    & .row-column {
+        justify-content: space-between;
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    &__header-title {
+        line-height: 1.3rem;
+        height: 85px;
+        @media (max-width: $xlg) {
+            height: auto;
+        }
+    }
+
+    &__heading-desc {
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    &__heading-desc-href {
+        text-decoration: none;
+    }
+
+    &__select {
+        width: 30em;
+        border-color: $secondary-color;
+    }
+
+    &__btn.btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    &__form-label {
+        color: $secondary-color;
+        font-size: 11px;
+        height: 15px;
+    }
+
+    &-form__field input {
+        border-color: $secondary-color;
+    }
+
+    &-form__field input::placeholder {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: $grayDark;
+    }
+
+    &-form__field input:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    &__block-letop {
+        border: 1px solid $secondary-color;
+        padding: 5px;
+
+        &-title {
+            font-weight: bold;
+            color: $secondary-color;
+            font-family: sans-serif;
+            font-size: 1.2rem;
+        }
+
+        &-text {
+            font-size: 1rem;
+        }
+    }
+
+    &__block-checkbox {
+        margin-top: 8px;
+
+        &-label {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-weight: bold;
+                margin-left: 8px;
+                font-size: 1.3rem;
+                color: black;
+            }
+        }
+
+        &-item {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            border: 1px solid $secondary-color;
+            border-radius: 0;
+        }
+    }
+
+    &__pdf-label {
+        //display: flex;
+    }
+
+    &__pdf-file {
+        cursor: pointer;
+        //height: 60%;
+        border: 1px solid $secondary-color;
+        margin-bottom: 15px;
+        display: flex;
+
+        &-label {
+            text-align: center;
+            color: $secondary-color;
+            min-height: 650px;
+            //height: 100%;
+            width: 100%;
+            object-fit: contain;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-image {
+            width: 100%;
+            height: 650px;
+        }
+    }
+
+    &__data-files {
+        height: 220px;
+        min-height: 220px;
+        max-height: 220px;
+    }
+
+    .editor-field {
+        margin: 0px;
+    }
+
+    &-textarea {
+        border: 1px solid $secondary-color;
+        resize: none;
+        height: 220px;
+    }
+
+    &-textarea::placeholder {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: $grayDark;
+    }
+
+    &-textarea:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    .tox-tinymce {
+        margin-bottom: 0px;
+    }
+}
+
+
+button.add-files.upload2 {
+    border: 1px solid $secondary-color;
+    background: none;
+    outline: none;
+    border-radius: 0;
+    height: 100%;
+    text-align: left;
+    padding-left: 17px;
+}
+
+.add-files.upload {
+    border: 1px solid $secondary-color;
+    outline: none;
+    padding: 4px;
+    font-size: 13px;
+    background-color: #ee731b;
+    color: white;
+}
+
+.block_add_files {
+    border: 1px solid $secondary-color;
+    overflow: auto !important;
+    margin-top: 7px;
+    height: calc(100% - 50px);
+    min-height: 150px;
+    flex-wrap: unset;
+    display: block;
+    font-size: 15px;
+}

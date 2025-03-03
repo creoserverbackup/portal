@@ -1,0 +1,70 @@
+.cart-data {
+
+  &__textarea {
+    resize: none;
+    border: 1px solid $primary-color;
+
+    &:disabled {
+      background: rgba($disabledButton, 0.3);
+      border-color: rgba($disabledButton, 0.8);
+    }
+
+    &::placeholder {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: $grayDark;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+  }
+
+  &__input {
+    border: 1px solid $primary-color;
+
+    &:disabled {
+      background: rgba($disabledButton, 0.3);
+      border-color: rgba($disabledButton, 0.8);
+    }
+  }
+  &__input::placeholder {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: $grayDark;
+  }
+
+  &__download-btn,
+  &__print-btn {
+    /*height: 25px;*/
+    background: white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  &__icon-download-btn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 19px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAABPklEQVQ4ja2Tu0oDURCGv01ESJUUPoCXRlNoI9inFqxttEghiFUwVao8QQQbewU7+xQpLH2FFCJo4QW0UDQYTWR0Dgyb3XUW8sOyh7Mz3/w7Z060vH8aMUUVnKixPln6NeYFHgDbDui/wLHGtIFDR6zLofzKO/DhiM3VQ5e8QLeygGmuMk88DSgJFV2PwkiYnHIeoMDmgD5wosAvYAgUgQvgCphNcjqTABO9AZfAntkvAWfAFnCsRSL9FiUBbbWBDvKngS4AG0AHaBgYFlowGxLcA+Z1TxzsAuem0JHCQs665iwGuHW4CtSAJeBGKwp0R4f6GWhqbHC3pjkCvI4Dh/p+jbVAoPWUXofY76QehnULuMOnFY2S058A3gIvwGaOGyTuH4GHOFB60gWqtppTMglP4ZTjc3ifExb0N4fAD88ASAYnnXN4AAAAAElFTkSuQmCC');
+  }
+
+  &__icon-print {
+    width: 17px;
+    height: 14px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAABRElEQVQokYXSQUtVURQF4O/pe2okog4EJSSogWCDwB/QpIng7P0BJ4KKFBg0ayg68jcE0kRwJkgDnThxkCAIQihIgwiahdbLUJOd+8k1vM8Fl3vPOWvtve4+qzIyuyLxCFuoKMdfvMC3YFQLtGH04lmS/kc7PmHwLnGgge8tOjeKzkI8hbnsGt0PSoTh5ilWcYrlEE9iHx/wB10l4oc4y/MJ1EN8gV1stLAbeI4BDGEb49W003GPMLCX7xrehK45sLDThwX0tCjwA2+T/29g0bUbo5iJQeBXyT+/wvvk19qwiddYw+e0FC4e5/Mk1/N5vp5FdqLzu6w2hqWc5peC/Z84wYN0Op23c9wc2FHec3zH3kv0503U8TULhdPD5N9KWGdWjxks5voS5+ki4hl7NzkoiiOvQfyI3ymMKIYgOjZxHV9cAVovP9Aq2D4QAAAAAElFTkSuQmCC');
+  }
+
+}

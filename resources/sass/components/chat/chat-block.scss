@@ -1,0 +1,99 @@
+.chat {
+  $self: &;
+  &__message {
+
+    &-block {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid solid solid none;
+        border-color: transparent $primary-color transparent transparent;
+        border-width: .6rem .6rem .6rem 0;
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-text {
+      background: $primary-color;
+      color: $white;
+      font-size: 1.3rem;
+      display: inline-block;
+      padding: .7rem;
+      position: relative;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      overflow: hidden;
+
+      a {
+        color: $white;
+
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-img {
+      min-width: 10%;
+      max-width: 80%;
+      cursor: pointer;
+    }
+
+    &-file {
+      cursor: pointer;
+      text-decoration: underline;
+      color: blue;
+    }
+
+    &-date {
+      color: $grayMain;
+      font-size: 1rem;
+      display: block;
+    }
+
+    &-icon {
+      color: $primary-color;
+      left: 0;
+      top: .5rem;
+      font-size: 2.4rem;
+      align-items: center;
+    }
+
+    &-username {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 28px;
+    }
+
+    &-status {
+      font-size: 1rem;
+      margin: 0 .3rem;
+    }
+
+    &-is-support {
+      #{$self}__message-block {
+        position: relative;
+
+        &::before {
+          border-color: transparent $secondary-color transparent $secondary-color;
+        }
+      }
+
+      #{$self}__message-text {
+        background: $secondary-color;
+      }
+
+      #{$self}__message-icon {
+        color: $secondary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.order-center {
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+  }
+
+
+  @media (max-width: $sm) {
+    &__header-btn {
+      font-size: 0.8rem;
+    }
+  }
+}

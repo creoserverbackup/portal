@@ -1,0 +1,71 @@
+.contact-form {
+
+
+  .h4 {
+    color: $black !important;
+  }
+
+  label {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    color: $black;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+  }
+
+
+  label:before {
+    content: "*";
+    color: $red;
+    margin-right: 4px;
+  }
+
+  .timetable {
+    margin: 0px;
+    padding: 0;
+  }
+
+  .el-form-item__content {
+    //height: 30px;
+  }
+
+  .contact-form label {
+    height: 30px;
+    margin-bottom: 0;
+  }
+
+  .el-form-item {
+    margin-bottom: 10px;
+  }
+
+  .el-input__inner {
+    height: 30px;
+    border-radius: 0;
+    padding: 0.3rem 1rem;
+    width: 100%;
+    font-size: 1.4rem;
+    border: 1px solid $grayBlack;
+    outline: none;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    transition: all .3s;
+    color: $grayDark;
+  }
+
+  .el-textarea__inner {
+    border-radius: 0;
+
+  }
+
+
+  .el-form-item__error {
+    padding-top: 0;
+  }
+
+  .vs__dropdown-toggle {
+    width: 100%;
+  }
+}

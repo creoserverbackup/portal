@@ -1,0 +1,44 @@
+.static-page__title {
+    margin-bottom: 3rem;
+}
+
+.static-page__text {
+    margin-bottom: 3rem;
+}
+
+.static-page__subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.static-page__info-first {
+    display: inline-block;
+    min-width: 170px;
+}
+
+.our-data-main img {
+    width: 100%;
+}
+
+.our-data-main h5 {
+    font-weight: 700;
+    text-align: left;
+}
+
+.our-data-main .opening-time {
+    width: 100%;
+}
+
+.our-data-main .opening-time span,
+.our-data-main .buisness-info span,
+.our-data-main .container-wrapper span,
+.our-data-main .creo-info {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: black;
+}
+
+.our-data-main .info-label {
+    display: inline-block;
+    min-width: 80px;
+}

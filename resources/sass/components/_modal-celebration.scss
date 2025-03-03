@@ -1,0 +1,54 @@
+.modal-celebration {
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  @media (min-width: $sm) {
+    min-height: 35rem;
+  }
+
+  @media (min-width: $md) {
+    min-height: 55rem;
+  }
+
+  @media (min-width: $lg) {
+    min-height: 65rem;
+  }
+
+  .text-center {
+    margin-top: auto;
+  }
+
+  .btn {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 2.4rem;
+    min-width: 18rem;
+    z-index: 3;
+  }
+
+  &--new-year {
+    //background: url('/images/media/modals/xmass-text.png') no-repeat center / 90% auto, url('../../../public/images/media/modals/xmass.jpg') right bottom / 50% auto no-repeat;
+    color: $primary-color;
+    padding: 2rem 4rem;
+
+    @media (min-width: $sm) {
+      //background: url('/images/media/modals/xmass-text.png') no-repeat center / 90% auto, url('../../../public/images/media/modals/xmass.jpg') right bottom no-repeat;
+    }
+
+    p {
+      font-size: 2.2rem;
+      margin: 1rem 0;
+      text-indent: -9999px;
+    }
+
+    .lead {
+      font-size: 13rem;
+    }
+  }
+}
+
+.showing-celebration {
+  padding: 0 !important;
+}

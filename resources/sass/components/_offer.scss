@@ -1,0 +1,43 @@
+.offer {
+    &__list {
+        list-style: none;
+        margin-bottom: 3rem;
+
+        @media (min-width: $md) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        flex-basis: 33.333%;
+        max-width: 33.333%;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 2rem;
+
+        @media (max-width: $xlg) {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+        span {
+            color: $secondary-color;
+        }
+    }
+
+    &__list {
+    }
+
+    h1 {
+        color: $secondary-color;
+    }
+
+    &__content {
+        margin-bottom: 6rem;
+    }
+
+    textarea {
+        resize: none;
+    }
+}

@@ -1,0 +1,25 @@
+/node_modules
+/public/hot
+/public/mix-manifest.json
+/public/images/vendor
+/public/css
+/public/js
+/public/storage
+/public/Product database.xlsx
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+
+*.idea
+*.DS_Store
+/public/database/
+/requests.http

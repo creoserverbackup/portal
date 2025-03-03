@@ -1,0 +1,79 @@
+{
+    "private": true,
+    "scripts": {
+        "preinstall": "npx npm-force-resolutions",
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "@intlify/vue-i18n-loader": "^1.1.0",
+        "axios": "^0.19.2",
+        "cross-env": "^7.0.3",
+        "laravel-echo": "^1.10.0",
+        "laravel-mix": "^5.0.9",
+        "lodash": "^4.17.21",
+        "popper.js": "^1.12",
+        "pusher-js": "^6.0.3",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.32.8",
+        "sass-loader": "^8.0.0",
+        "vue": "^2.6.12",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "name": "creoserver-portal",
+    "description": "Creoserver Portal",
+    "main": "webpack.mix.js",
+    "directories": {
+        "test": "tests"
+    },
+    "keywords": [
+        "creoserver",
+        "portal"
+    ],
+    "dependencies": {
+        "@tinymce/tinymce-vue": "^3.2.8",
+        "@vue/composition-api": "^1.4.1",
+        "bootstrap": "^4.6.0",
+        "dayjs": "^1.10.4",
+        "element-ui": "^2.15.14",
+        "laravel-vue-pagination": "^2.3.1",
+        "luxon": "^1.26.0",
+        "node-sass": "^4.14.1",
+        "print-js": "^1.6.0",
+        "secure-ls": "^1.2.6",
+        "simplebar-vue": "^1.6.0",
+        "svg4everybody": "^2.1.9",
+        "swiper": "^5.4.5",
+        "unsplash-js": "^6.3.0",
+        "v-suggestions": "^1.1.1",
+        "vee-validate": "^3.4.5",
+        "vue-awesome-swiper": "^4.1.1",
+        "vue-axios": "^2.1.5",
+        "vue-cli-plugin-i18n": "^0.6.1",
+        "vue-cookies": "^1.8.0",
+        "vue-demi": "^0.12.1",
+        "vue-html2pdf": "^1.8.0",
+        "vue-i18n": "^8.24.2",
+        "vue-laravel-pagination": "^1.0.3",
+        "vue-range-component": "^1.0.3",
+        "vue-recaptcha": "^1.3.0",
+        "vue-router": "^3.5.1",
+        "vue-select": "^3.20.0",
+        "vue-slick-carousel": "^1.0.6",
+        "vue-social-sharing": "^3.0.7",
+        "vue-zoom-on-hover": "^1.0.5",
+        "vuebar": "0.0.20",
+        "vuedals": "^1.8.0",
+        "vuex": "^3.6.2",
+        "vuex-persistedstate": "^3.2.0"
+    },
+    "resolutions": {
+        "yargs-parser": "^18.1.3"
+    },
+    "version": "0.15.0"
+}

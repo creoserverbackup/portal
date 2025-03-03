@@ -1,0 +1,203 @@
+body.night-mode {
+    background: #333;
+    color: $white;
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        color: $secondary-color;
+    }
+
+    .checkbox-switcher__label,
+    .lang-area__desc,
+    .checkbox-switcher input[type=checkbox]:checked + .checkbox-switcher__label,
+    .stages__stage-step,
+    .lang-area__caption,
+    .promo-area__creo-member-link,
+    .profile-form__helper,
+    .profile-form__user-logo .upload-file__desc,
+    .product-controls,
+        //.product,
+        //.product__desc,
+        //.product__current-price,
+        //.product__old-price,
+        //.product__rate-heading,
+        //.product__rate-stars-inactive,
+    .dashboard__sidebar-copy,
+    .timetable,
+    .header-utility__product,
+    .product-main__heading,
+    .product-main__params-property,
+        //.product__heading,
+    .support-center__about,
+    .support-center__table,
+    .support-center__article,
+    .support-center__main-table,
+    .support-center__main-table a,
+    .support-center__heading-desc,
+    .support-center__infoblock,
+    .review__body,
+    .contact-center__detail-address,
+    .chat-summary__desc,
+    .chat__person table td:first-child,
+    .contact-center__upcoming-caption{
+        color: $white;
+    }
+
+    .checkbox-switcher input[disabled] + .checkbox-switcher__label,
+    .timetable__day--active,
+    .product-main__main-info,
+    .product-main__params-value,
+    .support-center__summary,
+    .product-main__config-setting,
+    .support-center__more,
+    .support-center__create-ticket-desc,
+    .support-center__main-table tr:hover td,
+    .header-utility__product-rm [class*=icon],
+    .timetable__day.active {
+        color: #bbb;
+    }
+
+    .product {
+        background: #ccc;
+    }
+
+    .dashboard-roof,
+    .product-controls {
+        background: transparent;
+    }
+
+
+    .active .stages__stage-step {
+        color: #04d354;
+    }
+
+    .profile-form__summary,
+    .promo-area__creo-member-position,
+    .product-main__config-heading,
+    .contact-center__detail-heading,
+    .contact-center__detail-address a {
+        color: $secondary-color;
+    }
+
+    .lifeline {
+        color: $white;
+        border-color: $white;
+    }
+
+    .lifeline__heading {
+        border-bottom-color: $white;
+    }
+    .create-ticket__description {
+        color: white;
+    }
+    .lifeline__ending {
+        border-top-color: $white;
+    }
+
+    .dashboard-nav__link {
+        border-color: $white;
+        color: $white;
+
+        &:hover {
+            color: $white;
+            border-color: $secondary-color;
+        }
+    }
+
+    //.product__heading-link,
+    .header-utility__product a {
+        color: $white;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .header-utility__dropdown {
+        background: rgba($black, 0.8);
+    }
+
+    .search-form__input,
+    .profile-form__select,
+        //.tox .tox-edit-area__iframe,
+    .profile-form__input,
+    .tox .tox-statusbar,
+    .tox .tox-statusbar a,
+    .tox .tox-statusbar__path-item, .tox .tox-statusbar__wordcount,
+    .dashboard__mob-toggles-toggle {
+        background-color: #333;
+        color: $white;
+    }
+
+    .curtain,
+    .product-main__config-select {
+        background: #333;
+    }
+
+    .curtain .loader #loader-msg,
+    .product-main__config-select {
+        color: white;
+    }
+
+    .curtain .loader .spinner-line {
+        border-color: white;
+        border-top-color: transparent;
+    }
+
+    .dashboard__sidebar,
+    .dashboard__lifeline {
+        @media (max-width: $xlg--mw) {
+            background: #333;
+        }
+    }
+
+    .review__body {
+        background: #555;
+    }
+
+    //#333
+    div.vuedal.showing-the-money {
+        background: #333;
+        color: white;
+        .modal-info__heading {
+            color: white;
+        }
+        .modal-info__desc {
+            color: white;
+        }
+    }
+    .modal-inner {
+        background: #333;
+        color: white;
+        .modal_h2 {
+            color: white;
+        }
+        .modal-close svg {
+            fill: #ee731b;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .night-mode .selected-background-dashboard {
+        background: #333;
+    }
+}
+
+body.night-mode .checkbox-label__main {
+    color: #999999;
+}
+
+body.night-mode .dashboard-nav__link svg g {
+    fill: darkgray;
+}

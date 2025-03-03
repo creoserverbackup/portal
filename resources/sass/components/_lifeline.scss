@@ -1,0 +1,130 @@
+.lifeline {
+  border: 1px solid #a7a6a7;
+  padding: .5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #a7a6a6;
+
+  margin-right: 15px;
+
+  &__dates {
+    //font-size: .8rem;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    padding-top: 2.5rem;
+
+    @media (min-width: $xlg) {
+      padding-top: 0;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 2.9rem;
+    border-bottom: 1px solid #a7a6a7;
+    padding-bottom: 1rem;
+    margin-bottom: .5rem;
+    line-height: 1.1;
+
+    @media (min-width: $xlg) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__orders {
+    height: 25rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+
+  &__order {
+    background: $primary;
+    color: $white;
+    padding: .7rem 1rem;
+    margin-bottom: 5px;
+    transition: all .3s;
+    cursor: pointer;
+    line-height: 1.2;
+
+    &:hover {
+      background: $secondary;
+    }
+
+    &-dates {
+      font-size: .8rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-desc {
+      font-size: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__ending {
+    border-top: 1px solid #a7a6a7;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1rem 0 .5rem;
+    margin-top: auto;
+    text-decoration: none;
+    transition: all .3s;
+    overflow: hidden;
+
+    &-btn {
+      color: #a7a6a7;
+      display: block;
+      text-decoration: none;
+      position: relative;
+      padding: 1rem 0;
+      width: 90%;
+      margin: 0 auto;
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        content: "";
+        transition: all .3s;
+      }
+
+      &:hover {
+        color: $white;
+        border-top-color: transparent;
+        transition: all .3s;
+        background: $secondary;
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+          background: $secondary;
+        }
+      }
+    }
+  }
+
+    .has-notify {
+        animation: pulseGlow 2s infinite;
+
+        @media (min-width: $xlg) {
+            animation: pulse 2s infinite;
+        }
+
+        &:hover {
+            animation: none;
+        }
+    }
+
+}

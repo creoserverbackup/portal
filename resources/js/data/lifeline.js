@@ -1,0 +1,15 @@
+module.exports = {
+    order: 0,
+    rma: 1,
+    mail: 2,
+    social: 3,
+    paid: 4,
+    archived: 5,
+    system: 6,
+    agenda: 7,
+    chat: 8,
+    ticket: 9,
+    request: 10,
+    offerte_frame: 20,
+    factuur_frame: 21,
+}

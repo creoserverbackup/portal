@@ -1,0 +1,76 @@
+.product-main-associated {
+
+  &__title {
+    cursor: pointer;
+  }
+
+  &__arrow {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid $success-color;
+    transform: rotateZ(0deg) translateY(0px);
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(.59, 1.39, .37, 1.01);
+  }
+
+  &__expanded {
+    transform: rotateZ(180deg) translateY(2px);
+    border-top: 10px solid $grayBlack;
+  }
+
+  &__products {
+    &-show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-hide {
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.55s opacity, 0.55s visibility;
+    }
+  }
+
+  .checkbox-label__main {
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    padding-left: 4rem;
+  }
+
+  .checkbox-label__main::before {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-color: #777;
+    border-radius: 0;
+    background: #fff;
+    margin-top: -4px;
+  }
+
+  .checkbox-label__input:checked + .checkbox-label__main::before {
+    border-color: #008000;
+  }
+
+  .checkbox-label__input:checked + .checkbox-label__main::after {
+    content: "\E903";
+    font-family: 'icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #008000;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

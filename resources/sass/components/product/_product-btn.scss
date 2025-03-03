@@ -1,0 +1,18 @@
+.product-btn {
+  color: white;
+  border: none;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 5px;
+  line-height: 3rem;
+  cursor: pointer;
+  transition: all .3s;
+  width: 100%;
+
+  //&:hover {
+  //  color: white;
+  //  background: darken($secondary-color, 15%);
+  //  //background: $secondary-color;
+  //}
+}

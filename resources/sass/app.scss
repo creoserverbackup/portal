@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+// 1.Abstracts (Configuration and Helpers)
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+// 2.Vendors
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+
+//@import '~swiper/swiper';
+
+@import 'vendors/simplebar';
+@import '~vue-slick-carousel/dist/vue-slick-carousel.css';
+@import '~vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+
+// 3.Base stuff
+@import "base/base";
+// maybe reset
+@import "base/utilities";
+// aka helpers
+@import "base/fonts";
+@import "base/typography";
+@import "base/forms";
+@import "base/table";
+@import "base/animations";
+@import "base/print";
+@import "base/browsers";
+
+// 4.Layout
+@import "layouts/icons";
+@import "layouts/contact-form";
+@import "layouts/tox";
+@import "layouts/helper-section";
+@import "layouts/dashboard";
+@import "layouts/dashboard-roof";
+@import "layouts/support-center-layout";
+@import "layouts/support-list-section";
+@import "layouts/profile-settings";
+@import "layouts/return-service";
+@import "layouts/rma-layout";
+@import "layouts/communication-center";
+@import "layouts/contact-center";
+@import "layouts/payment-flow";
+@import "layouts/payment-flow-frame";
+
+@import "layouts/scroll";
+
+@import "layouts/pagination";
+@import "layouts/add-files";
+
+// 5.Components
+@import "components/icons";
+@import "components/logo";
+@import "components/buttons";
+@import "components/promo-area";
+@import "components/stages";
+@import "components/select-form";
+@import "components/v-select";
+@import "components/unsplash-area";
+@import "components/recaptcha";
+@import "components/suggestions";
+@import "components/loader";
+@import "components/lifeline";
+@import "components/timetable";
+@import "components/dashboard-nav";
+@import "components/filter";
+@import "components/breadcrumbs";
+@import "components/search-form";
+@import "components/header-utility-basket";
+@import "components/modal-wins";
+@import "components/product-main";
+@import "components/product-main-associated";
+@import "components/product-configurator";
+@import "components/table-specification";
+@import "components/review";
+@import "components/scroll-top";
+@import "components/rating";
+@import "components/custom-scroll";
+@import "components/chat-page";
+@import "components/nav-section";
+@import "components/banner";
+@import "components/modal-celebration";
+@import "components/alert-notification";
+@import "components/department-area";
+@import "components/review-service";
+@import "components/offer";
+@import "components/_image-slider";
+@import "components/dedicated-hosting";
+@import "components/popup";
+@import "components/popup_ok_or_no";
+@import "components/popup-cookie";
+@import "components/main-table";
+@import "components/pagination-block";
+@import "components/img-fluid";
+@import "components/banner-block-wrapper";
+@import "components/create-ticket";
+@import "components/pf-method-pay";
+@import "components/col";
+@import "components/request";
+@import "components/text";
+@import "components/animation";
+@import "components/dashboard-rolled";
+@import "components/editor";
+@import "components/advance-search-breadcrumbs";
+@import "components/elc-form-item";
+
+@import "components/cart/index";
+@import "components/chat/index";
+@import "components/popup/index";
+@import "components/menu/index";
+@import "components/product/index";
+@import "components/orderCenter/index";
+@import "components/profile/index";
+
+@import "components/bootstrap";
+
+@import "components/mobile";
+@import "components/ticket";
+
+// 6.Pages (page-specific styles)
+
+// 7.Themes
+@import "themes/night-mode";
+
+
+@for $i from 1 through 12 {
+    .mb-#{$i}0 {
+        margin-bottom: $spacer * $i;
+        //@include margin-bottom($spacer * $i)
+    }
+}
+
+#app {
+    height: 100%;
+}
+
+html {
+    @include media-breakpoint-down('xs') {
+        font-size: 14px;
+    }
+
+}
+
+.mobile_rolled_menu {
+    background: #fff;
+    width: 64px;
+    margin-left: -14px;
+    position: fixed;
+    z-index: 1;
+
+    .dashboard-nav__icon {
+        font-size: 1rem;
+    }
+
+    .dashboard-nav--thumbs-rolled {
+        margin-left: 0px !important;
+    }
+
+    .simplebar-content {
+        padding: 0 14px !important;
+    }
+
+    .dashboard-nav--thumbs-rolled .dashboard-nav__list {
+        margin: 0;
+    }
+
+    .dashboard-nav--thumbs-rolled .dashboard-nav__item {
+        max-width: 100%
+    }
+}
+
+@media (max-width: $xlg) {
+    .image-slider__zoom--click {
+        // margin-top: 50%;
+    }
+    .payment-flow__steps_item__step-2 {
+        &__wrapper {
+            flex-direction: column;
+            & > div {
+                flex-basis: 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .cart-s2__btn {
+                font-size: 17px;
+            }
+        }
+
+    }
+
+    .payment-flow__steps_item__step-3__wrapper {
+        flex-direction: column;
+        & > div {
+            margin-bottom: 20px
+        }
+
+    }
+
+    .payment-flow__steps_item__step-3__bottom {
+        max-height: 100%!important;
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        div {
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+    }
+
+    .payment-flow__steps_item__step-3__bottom__disclaimer__container {
+        padding: 0!important;
+        margin-top: 10px;
+    }
+    .payment-flow__steps_item__step-3__bottom__disclaimer {
+        max-height: 100%!important;
+    }
+
+    .cart-s3__type-title {
+        font-size: 1.3rem;
+    }
+
+    .payment-flow__steps_item__step-3__bottom__inputs {
+        input {
+            font-size: 1.2rem;
+        }
+    }
+
+    #loader-msg {
+        max-width: 350px;
+    }
+}
+
+
+.payment-flow__steps_item__step-3__bottom {
+    @media (max-width: 1440px) {
+        max-height: 100%!important;
+    }
+}

@@ -1,0 +1,64 @@
+.support-list-section {
+  border-top: 1px solid $gray-500;
+  padding-top: 3rem;
+  margin-top: 1.5rem;
+
+  &__desc {
+      height: 100%;
+      text-align: center;
+      color: $gray-500;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 1.5rem 0;
+
+      @media (min-width: $md) {
+          border-left: 1px solid $gray-500;
+      }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-right: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 250px;
+
+    li {
+
+    }
+  }
+}
+
+
+/* ---------- Tiny MCE ---------- */
+
+.support-list {
+  &__table {
+    font-size: 1.8rem;
+    color: #a7a6a6;
+  }
+
+  tr:hover td {
+    background: none;
+    color: $secondary-color;
+  }
+
+  table td {
+    border: none;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  .offline {
+    color: #f00;
+  }
+
+  .online {
+    color: #02c026;
+  }
+}

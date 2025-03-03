@@ -1,0 +1,4 @@
+*
+!.gitignore
+!../../../public/images/login-bg/
+!../../../public/images/login-bg/*

@@ -1,0 +1,41 @@
+.review-service {
+  &__header {
+    margin-bottom: 1.5rem;
+    display: flex;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+  }
+
+  &__rate {
+    margin-left: 1.5rem;
+
+    &-item {
+      display: inline-block;
+      vertical-align: middle;
+      color: #ffb400;
+    }
+  }
+
+  &__desc {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__copy {
+    margin: 0 0 1.5rem;
+    max-width: 14rem;
+    margin-left: auto;
+
+    &-img {
+      margin: 0 auto;
+    }
+  }
+
+  &__btn.btn {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

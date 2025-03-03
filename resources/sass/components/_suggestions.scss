@@ -1,0 +1,22 @@
+.suggestions {
+  position: relative;
+
+  .items {
+    position: absolute;
+    width: 100%;
+    background: white;
+    border: 1px solid #e6e6e6; 
+    border-top: none;
+  }
+
+  .item {
+    padding: .3rem 1rem;
+    font-size: 1.4rem;
+    color: #000;
+
+    &:hover {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+}

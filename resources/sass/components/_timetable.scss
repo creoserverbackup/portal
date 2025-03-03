@@ -1,0 +1,70 @@
+.timetable {
+  color: #a7a6a6;
+  line-height: 1.2;
+  max-width: 24rem;
+  margin: 0 auto;
+
+    @media (min-width: 1400px) {
+        padding: 0 1rem 1.5rem;
+    }
+
+  &__heading {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__datalist {
+    font-size: 1rem;
+  }
+
+  &__day {
+    display: flex;
+    margin-bottom: .3rem;
+
+    //&--active {
+    //  color: $black;
+    //}
+
+    &.active {
+      color: $black;
+
+      .timetable__data-definition span::after {
+        content: "";
+        width: .5rem;
+        height: .5rem;
+        background: #f00;
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translate(.5rem, -50%);
+        border-radius: 50%;
+        animation: pulseOfflineState 1.5s infinite;
+      }
+    }
+
+    &.online {
+      .timetable__data-definition span::after {
+        background: #00cd5e;
+        animation: pulseOnlineState 1.5s infinite;
+      }
+    }
+  }
+
+  &__description-list {
+    max-width: 50%;
+    flex-basis: 50%;
+    margin: 0;
+  }
+
+  &__data-definition {
+    max-width: 50%;
+    flex-basis: 50%;
+    margin: 0;
+    padding-right:10px;
+    text-align: right;
+
+    span {
+      position: relative;
+    }
+  }
+}

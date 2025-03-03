@@ -1,0 +1,91 @@
+.elc-form-item {
+  position: relative;
+
+  &--unstyled {
+    margin-bottom: 0;
+
+    .el-form-item__content {
+      line-height: inherit;
+    }
+  }
+
+  &--fw-bold {
+    .el-form-item__label {
+      font-weight: bold;
+    }
+  }
+
+  &--validate-icon {
+    &:after {
+      //font-family: icons !important;
+      font-family: element-icons !important;
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      font-size: 20px;
+      position: absolute;
+      left: 100%;
+      bottom: 50%;
+      transform: translateY(50%);
+      margin: 0 0 0 0.5rem;
+    }
+
+    &.is-error {
+      &:after {
+        content: "\e6db";
+        color: $danger;
+      }
+    }
+
+    &.is-success {
+      &:after {
+        content: "\e6da";
+        color: $success;
+      }
+    }
+  }
+
+  &.is-error {
+
+    div[class*="--s-primary-bs"] {
+      .el-input__inner {
+        border-color: $danger;
+      }
+    }
+
+    .label-checkbox__checkbox {
+      border-color: $danger;
+    }
+
+    .label-checkbox__text {
+      color: $danger;
+    }
+  }
+
+  &.is-success {
+    div[class*="--s-primary-bs"] {
+      .el-input__inner {
+        border-color: $success;
+      }
+    }
+  }
+
+  &.is-required:not(.is-error,.is-success) {
+    div[class*="--s-primary-bs"] {
+      .el-input__inner {
+        border-left-color: $primary;
+      }
+    }
+
+  }
+
+  //@include media('xs') {
+  //  &--validate-icon {
+  //    &:after {
+  //      display: none;
+  //    }
+  //  }
+  //}
+}

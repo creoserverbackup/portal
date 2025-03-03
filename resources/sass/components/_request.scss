@@ -1,0 +1,68 @@
+.request {
+  textarea {
+    resize: none;
+  }
+
+  select {
+    border-left-width: 1px;
+    border-color: $primary-color;
+  }
+
+  input {
+    border-color: $primary-color;
+  }
+
+  &__table {
+    thead {
+      background-color: $primary-color;
+      color: $white;
+    }
+
+    &-tr {
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    th, td {
+      border: none;
+      padding: 1rem;
+    }
+
+    &-message {
+      //overflow: auto;
+      //-webkit-line-clamp: 1;
+      //-webkit-box-orient: vertical;
+      //display: -webkit-box;
+      //overflow: hidden;
+      ///* padding: 0; */
+      //text-overflow: ellipsis;
+      overflow: auto;
+      /* width: 50%; */
+      //max-width: 60%;
+      /* height: 100px; */
+      max-height: 200px;
+      display: block;
+    }
+  }
+
+  &__table-tr {
+    cursor: pointer;
+
+
+    button {
+      border: none;
+      background-color: $secondary-color;
+      color: $white;
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+
+  .success {
+    margin-bottom: 2.5rem;
+    text-align: right;
+  }
+
+
+
+}
+

@@ -1,0 +1,123 @@
+.product-configurator {
+    $self: &;
+    position: relative;
+
+    &__result {
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+    }
+
+    &__input {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+    }
+
+    &__option-select {
+        border: 1px solid $success-color !important;
+        border-left: 4px solid $success-color !important;
+        cursor: pointer;
+        color: $black !important;
+        #{$self}__arrow {
+            border-top: 10px solid $success-color !important;
+        }
+    }
+
+    &__disabled {
+        border: 1px solid #878484;
+        border-left-width: 4px;
+        user-select: none;
+        color: #878484;
+    }
+
+    &__option-geen {
+        border: 1px solid $black;
+        border-left-width: 4px;
+        color: $black;
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 10px;
+        top: 40%;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 10px solid #878484;
+        transform: rotateZ(0deg) translateY(0px);
+        transition-duration: 0.3s;
+        transition-timing-function: cubic-bezier(.59, 1.39, .37, 1.01);
+    }
+
+    &__expanded {
+        transform: rotateZ(180deg) translateY(2px);
+    }
+
+    &__label {
+        padding: 0.3rem 3rem 0.3rem 1rem;
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: space-between;
+
+        &-italic {
+            //font-style: italic;
+        }
+
+        @media (max-width: $xlg) {
+            font-size: 0.5rem;
+        }
+    }
+
+    &__max-quantity {
+        color: $secondary-color;
+    }
+
+    ul {
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+        position: absolute;
+        z-index: 1;
+        background: #fff;
+        border: 1px solid gray;
+        max-height: 300px;
+        overflow: auto;
+    }
+
+    li {
+        color: gray;
+        background: white;
+        cursor: pointer;
+
+        &:hover {
+            color: white !important;
+            background: $primary-color;
+
+            .c-success {
+                color: white !important;
+            }
+
+            .c-secondary {
+                color: white !important;
+            }
+        }
+    }
+
+    &__li-selected {
+        color: white !important;
+        background: $success-color !important;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    .visible {
+        visibility: visible;
+        z-index: 100;
+    }
+
+}

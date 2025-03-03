@@ -1,0 +1,105 @@
+.return-page {
+    max-width: 1140px;
+    flex: 90%;
+
+    &-txt {
+        color: $font-base-color;
+        font-size: 16px;
+        margin-top: 30px;
+
+        &-title {
+            color: $primary-color;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.pickup-service-row {
+    justify-content: space-between;
+}
+
+.pickup-service__item {
+    text-align:center;
+
+    & img {
+        width:100%;
+    }
+
+    &-price {
+        font-size: 30px;
+        color: $primary-color;
+        padding-bottom: 21px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    &-subprice {
+        position: absolute;
+        bottom:0;
+        font-size:15px;
+        text-align: center;
+        width:100%;
+    }
+
+    &-footer-txt {
+        color:$secondary-color;
+        font-size: 10px;
+        font-style: italic;
+        margin-top: 5px;
+    }
+
+    &-btn {
+        color: $secondary-color;
+        font-size: 16px;
+        border: 1px solid $secondary-color;
+        padding: .5rem 1rem;
+        transition: all .3s;
+        background: transparent;
+
+        &:hover {
+            background: $secondary-color;
+            color: white;
+        }
+    }
+}
+
+@media(max-width: 1400px){
+    .pickup-service__item-price {
+        font-size: 20px;
+    }
+}
+
+.return-ul {
+    font-size: 12px;
+}
+
+.two-columns-ul {
+
+    margin-bottom: 15px;
+
+    strong {
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    &.row {
+        margin-right: 0;
+    }
+}
+
+
+.grey-background {
+    background: #ededed;
+    padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .pickup-service__item {
+        width: 100%;
+        max-width: 100%;
+    }
+    .pickup-service-row {
+        display: block;
+    }
+}

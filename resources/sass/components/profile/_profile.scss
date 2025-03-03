@@ -1,0 +1,492 @@
+.profile-form {
+  $self: &;
+
+  &__permission {
+    margin-top: 70px;
+  }
+
+  &__fieldset {
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: $xlg) {
+      max-width: 34rem;
+
+      &--min-height-flow {
+        min-height: 19rem;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+  }
+
+  &__field {
+    margin-bottom: 2rem;
+    position: relative;
+
+    &.m0 {
+      @media (min-width: $md) {
+        margin: 0;
+      }
+    }
+
+    &.error {
+      input,
+      select {
+        border-color: $tertiary-color;
+      }
+
+      &::after {
+        /*content: "";
+        width: 2.9rem;
+        height: 2.9rem;
+        position: absolute;
+        left: 100%;
+        top: -2px;
+        background: url('../../../public/images/cross.jpg') no-repeat center;
+        background-size: 2.2rem 2.2rem;*/
+
+        content: "\e904";
+        font-family: 'icons' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        color: #ff0000;
+        font-size: 2rem;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin: 0 0 0 .5rem;
+      }
+    }
+
+    &.success {
+      input,
+      select {
+        border-color: $success-color;
+      }
+
+      select {
+        background-image: linear-gradient(45deg, transparent 50%, $white 50%),
+        linear-gradient(135deg, $white 50%, transparent 50%),
+        linear-gradient(to right, $secondary-color, $secondary-color);
+      }
+
+      &::after {
+        /*content: "";
+        width: 2.9rem;
+        height: 2.9rem;
+        position: absolute;
+        left: 100%;
+        top: -2px;
+        background: url('../../../public/images/check.jpg') no-repeat center;
+        background-size: 2.2rem 2.2rem;*/
+
+        content: "\e903";
+        font-family: 'icons' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        color: #008000;
+        font-size: 2rem;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin: 0 0 0 .5rem;
+      }
+    }
+
+    .text-danger {
+      color: $tertiary-color;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      padding-top: .3rem;
+    }
+  }
+
+  &__input {
+    border-left-width: 4px;
+
+    &.required {
+      border-left-color: $secondary-color;
+    }
+  }
+
+  &__select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+
+    border-left-width: 4px;
+    background: #fff url('../../../images/select-arr.png') no-repeat 100% 0;
+
+    background-size: 2.5rem 100%;
+
+    &.required {
+      border-left-color: $secondary-color;
+    }
+  }
+
+  #country::-webkit-calendar-picker-indicator {
+    //background-color: inherit;
+    display: none;
+  }
+
+  &__select::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
+  &__helper {
+    font-size: .9rem;
+    padding: .3rem 0 0;
+    display: block;
+    font-style: italic;
+    color: #555;
+    line-height: 1.1;
+  }
+
+  &__checkbox {
+    margin-bottom: 1rem;
+
+    &--days {
+      margin-top: -1.5rem;
+    }
+
+    > .checkbox-label__main {
+      min-height: 2.5rem;
+      min-width: 2.5rem;
+      padding-left: 4rem;
+    }
+
+    > .checkbox-label__main::before {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-color: #777;
+      border-radius: 0;
+      background: #fff;
+    }
+
+
+    > .checkbox-label__input:checked + .checkbox-label__main {
+
+      &::before {
+        border-color: $success-color;
+      }
+
+      &::after {
+        content: "\e903";
+        font-family: 'icons' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        color: $success-color;
+        background: $white;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        font-size: 1.7rem;
+        position: absolute;
+        left: .5rem;
+        top: .35rem;
+      }
+    }
+
+    #{$self}__days {
+      padding-left: 4rem;
+      white-space: nowrap;
+    }
+
+    #{$self}__day {
+      display: inline-block;
+      vertical-align: middle;
+
+      .checkbox-label__input {
+        &:checked + .checkbox-label__main {
+          background: $secondary-color;
+          color: $white;
+          border-color: $secondary-color;
+        }
+
+        &[disabled] + .checkbox-label__main {
+          color: #777;
+          border-color: #777;
+          opacity: 1;
+          background: $white;
+        }
+      }
+
+      .checkbox-label__main {
+        font-size: 1rem;
+        border: 1px solid #777;
+        padding: 0 .5rem;
+        background: #777777;
+        color: $white;
+        margin-right: 2px;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__keycode {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    line-height: 1.2;
+
+    &__heading {
+      color: $black;
+    }
+
+    &-code {
+      color: $secondary-color;
+    }
+
+    &-code-profile {
+      margin-left: 1rem;
+      color: $secondary-color;
+    }
+  }
+
+  &__keycode-profile {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    display: -webkit-inline-box;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    line-height: 1.2;
+
+    &__heading {
+      color: $black;
+    }
+
+    &-code-profile {
+      margin-left: 2rem;
+      color: $secondary-color;
+    }
+  }
+
+  &__user-logo {
+    max-width: 16rem;
+    margin: 0 auto;
+
+    &.error {
+      .upload-file__desc {
+        color: #ff0000 !important;
+      }
+    }
+
+    @media (min-width: $sm) {
+      margin: 0;
+    }
+
+    .upload-file__img-wrap {
+      border: 1px solid #777;
+      border-bottom: none;
+      position: relative;
+      background: #d7d7d7;
+      height: 12rem;
+    }
+
+    .upload-file__img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .upload-file__label {
+      text-align: center;
+      color: $white;
+      background: $secondary-color;
+      border: none;
+      margin: 0 0 .5rem;
+      padding: 1rem;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    .upload-file__desc {
+      font-size: 1rem;
+      color: #777;
+      line-height: 1.2;
+      display: block;
+      font-style: italic;
+      min-width: 27rem;
+    }
+  }
+
+  &__captcha {
+    margin-bottom: 3rem;
+
+    @media (min-width: $lg) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .g-recaptcha {
+    margin-top: 3rem;
+  }
+
+  &__summary {
+    color: $primary-color;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+
+  &__send {
+    position: relative;
+    padding-right: 10rem;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    border: none;
+    text-indent: -6rem;
+
+    &:hover {
+      background-color: $secondary-color;
+      opacity: .8;
+    }
+
+    &::before {
+      width: 6rem;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-left: 5px solid $white;
+      //background: url('../../../public/images/submit-arr.jpg') no-repeat center;
+      z-index: 2;
+      font-size: 3rem;
+      line-height: 3.5rem;
+      color: $white;
+      text-align: center;
+      text-indent: 0;
+
+      content: "\e90f";
+      font-family: 'icons' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    &[disabled] {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media(min-width:1400px){
+    &__col {
+      &--2xl-6 {
+        flex:0 0 50%;
+        max-width: 50%;
+      }
+
+
+    }
+  }
+
+
+  &__column {
+    @media (min-width: $lg) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__captcha {
+    margin-left: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.form-select::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+.buttons-row {
+  display: flex;
+  //margin-top: 30px;
+
+  & button {
+    text-align: center;
+    margin-right: 26px;
+    font-size: 22px;
+    line-height: 1.2;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 0;
+    outline: 0;
+    display: block;
+    width: 100%;
+    background: #ee731b;
+    cursor: pointer;
+
+    &.red {
+      background: #ee731b;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .modal:before {
+    content: "";
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    margin-right: -0px;
+    height: 100%;
+  }
+}

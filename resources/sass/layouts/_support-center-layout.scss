@@ -1,0 +1,266 @@
+.support-center {
+    border-top: 1px solid #a7a6a6;
+    padding-top: 1rem;
+    width: 86%;
+    max-width: 1110px;
+
+    .main-table {
+        @media (max-width: $xlg) {
+            font-size: 1rem;
+
+        }
+
+    }
+
+    @media (max-width: $xlg) {
+        width: 100%;
+    }
+
+    > .row > [class*="col-"]:first-child {
+        margin-bottom: 3rem;
+    }
+
+    @media (min-width: $md) {
+        > .row > [class*="col-"]:first-child {
+            padding-right: 5rem;
+            border-right: 1px solid #a7a6a6;
+            margin-bottom: 0;
+        }
+
+        > .row > [class*="col-"]:last-child {
+            padding-left: 5rem;
+        }
+    }
+
+    &__heading {
+        &-desc {
+            font-size: 2.1rem;
+            color: $primary-color;
+            display: block;
+        }
+    }
+
+    h1.support-center__heading {
+        font-size: 4rem;
+
+        @media (min-width: 1840px) {
+            font-size: 5rem;
+        }
+
+        @media (max-width: $xlg) {
+            font-size: 2.3rem;
+        }
+    }
+
+    &__heading-icon {
+        margin-bottom: 3rem;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    &__about {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.7rem;
+        color: #a7a6a6;
+
+        .offline {
+            color: #f00;
+        }
+
+        .online {
+            color: #02c026;
+        }
+    }
+
+    &__summary {
+        color: #a7a6a6;
+        font-style: italic;
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    &__form {
+        padding: 8rem 0;
+
+        .profile-form__label {
+            font-size: 1.7rem;
+        }
+
+        .profile-form__select {
+            border-left-width: 1px;
+            border-color: $primary-color;
+        }
+
+        .btn {
+            width: 100%;
+            font-size: 1.3rem;
+
+            &:disabled {
+                cursor: default;
+
+                &:hover {
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+
+    &__table {
+        font-size: 1.3rem;
+        color: #a7a6a6;
+
+        tr:first-child td {
+            border-top: 1px solid #a7a6a6;
+        }
+
+        tr:hover {
+            td {
+                color: $secondary-color;
+                //font-weight: bold;
+                background: transparent;
+            }
+        }
+
+        td {
+            padding: .5rem;
+            border-color: #a7a6a6;
+            cursor: pointer;
+        }
+
+        .read {
+            color: black;
+            background-color: springgreen;
+        }
+
+        .no_read {
+            background-color: darkslategrey;
+        }
+
+        .last-message-field {
+            max-width: 14em;
+        }
+    }
+
+    &__main-table-wrap {
+        max-height: 24rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-bottom: 2.5rem;
+
+
+    }
+
+    &__status {
+
+        color: $white;
+        padding: .3rem .5rem;
+        transition: all .3s;
+
+        &.red {
+            background: #f00;
+        }
+
+        &.orange {
+            background: $secondary-color;
+        }
+
+        &.green {
+            background: #438a3f;
+        }
+
+        &.blue {
+            background: #4980ff;
+        }
+
+        &:hover {
+            text-decoration: none;
+            opacity: .8;
+        }
+    }
+
+    &__more.btn {
+        border-top: 1px solid #a7a6a6;
+        border-bottom: 1px solid #a7a6a6;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        margin-top: 1.5rem;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    &__create-ticket-wrap {
+        margin-bottom: 2.5rem;
+
+        @media (max-width: $xlg) {
+           font-size: 1.4rem;
+        }
+
+    }
+
+    &__article {
+        color: $dark;
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        @media (min-width: $md) {
+            padding-left: 6rem;
+        }
+
+        @media (min-width: 1840px) {
+            font-size: 2.1rem;
+        }
+
+        &-heading {
+            font-size: 3.3rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+            margin-top: 0rem;
+
+            @media (max-width: $xlg) {
+                font-size: 2.3rem;
+                margin-top: 0rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+
+        p {
+            margin-bottom: 2.5rem;
+        }
+
+        &-company {
+            text-align: right;
+
+            @media (min-width: $md) {
+                padding-right: 8rem;
+            }
+        }
+    }
+
+    &__info {
+        padding: 1.5rem;
+        border: 1px solid #a7a6a7;
+        color: #333;
+        font-size: 1.7rem;
+        columns: 20rem 2;
+
+        @media (max-width: $xlg) {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__reviews {
+        height: 500px;
+        overflow: auto;
+    }
+
+    &__review {
+        &:not(:first-child) {
+            margin-top: 4rem;
+        }
+    }
+}
